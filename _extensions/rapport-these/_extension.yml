@@ -1,0 +1,24 @@
+title: GT Vallet Rapport
+author: Guillaume Vallet
+version: 0.0.1
+quarto-required: ">=1.4.0"
+contributes:
+  lang: fr 
+  formats:
+    pdf:
+      papersize: letter
+      fontsize: 11pt
+      date: today
+      date-format: "D MMMM YYYY"
+      toc: false
+      pdf-engine: pdflatex
+      geometry:
+      - top=2.5cm
+      - bottom=3.5cm
+      - left=2cm
+      - right=2cm
+      template-partials:
+        - before-title.tex
+        - before-body.tex
+      format-resources:
+        - logoUQTR.png

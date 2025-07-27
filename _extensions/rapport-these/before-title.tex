@@ -1,0 +1,93 @@
+\RequirePackage[french]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{titlesec}
+
+\hypersetup{colorlinks=false, hidelinks}
+
+% Define some colors
+\definecolor{l3c}{RGB}{97, 68, 26}
+\definecolor{myGrey}{RGB}{97, 68, 26}
+\definecolor{sintefgrey}{HTML}{A19589}
+\colorlet{sintefgray}{sintefgrey}
+
+% Define a new command to draw a light rule
+\newcommand{\separator}{%
+  % To make sure we have spacing on both sides, make an invisible rule, 2X tall
+  \rule{0ex}{2ex}%
+   % Place the dashed rule 1X high
+  \textcolor{sintefgray}{\rule[1ex]{\textwidth}{0.25pt}}%
+}
+
+% Define the section format
+\titleformat{\section}
+{\color{l3c}\normalfont\Large\bfseries}
+{\color{l3c}\thesection}{1em}{}
+\titlespacing*{\section}
+{0pt}{1.5em}{0em}
+
+% Define the header and footer
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  \fancyhead[L]{\includegraphics[height=1.5cm]{logoUQTR.png}}% Right header
+  \fancyhead[R]{\scriptsize{\textcolor{l3c}{
+      Guillaume Vallet\\Dépt de Psychologie\\
+      \href{https://www,gtvallet.com}{gtvallet.com}\\ 
+      \href{mailto:guillaume.vallet@uqtr.ca}{guillaume.vallet@uqtr.ca}
+  }}}
+  \fancyfoot[L]{
+    \textcolor{darkgray}{Rapport de thèse : $candidat$}}% Left footer
+  \fancyfoot[R]{\textcolor{darkgray}{Page \thepage\ sur \pageref{LastPage}}}% Right footer
+  \renewcommand{\footrulewidth}{.5pt}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\pagestyle{plain}
+
+\RequirePackage{colortbl,tabularx,setspace,rotating}
+\newcommand{\frontmatter}{%
+  \sffamily%
+  \noindent%
+  \begin{minipage}[b]{0.7\textwidth}
+    \vspace{1cm}
+    \setlength{\parskip}{2ex}%
+    
+    \Large $doctype$ \\
+    Présenté par $candidat$\\
+  \end{minipage}
+
+  \vspace{-3ex}%
+  \noindent {\LARGE \color{l3c} \@title}
+
+  \vspace{1.5ex}%
+  \noindent% 
+  \normalsize
+  \separator\\
+  \hfill
+  \begin{minipage}{0.32\textwidth}
+    \textbf{Grade de docteur}\\
+    $grade$
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.20\textwidth}
+    \textbf{Université :}\\
+    $univ$
+  \end{minipage}
+  \hfill
+  $if(ed)$
+  \begin{minipage}{0.32\textwidth}
+    \textbf{\'{E}cole doctorale :}\\
+    $ed$
+  \end{minipage}
+  $else$
+  \begin{minipage}{0.32\textwidth}
+    \textbf{Date d'\'{e}valuation :}\\
+    $date$
+  \end{minipage}
+  $endif$
+  \hfill\\
+  \separator\\
+  \vspace{0cm}
+}

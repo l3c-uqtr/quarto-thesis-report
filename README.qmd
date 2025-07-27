@@ -1,0 +1,51 @@
+---
+format: gfm
+---
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+```{r}
+#| include: false
+# Create pdf and png version of template
+library(tidyverse)
+library(quarto)
+library(magick)
+
+# Render template
+quarto_render(input = "template.qmd")
+# Convert rendered PDF to PNG
+image_read_pdf("template.pdf", pages = 1) |>
+  image_montage(geometry = "x1000+25+35", tile = 1, bg = "grey92", shadow = TRUE) |>
+  image_convert(format = "png") |>
+  image_write("examples/template.png")
+# Move pdf to examples folder
+fs::file_move("template.pdf", "examples/template.pdf")
+```
+
+# L3C Quarto Thesis report template
+
+This is a Quarto template to write a thesis report. 
+Only available in French and adapted for Université du Québec à Trois-Rivières (UQTR). 
+
+## New report
+
+You can use this as a template to create a thesis report.
+
+```bash
+quarto use template l3c-uqtr/quarto-thesis-report
+```
+
+This will install the extension and create an example qmd file that you can use as a starting place for your report.
+
+## Installation for existing document
+
+You may also use this format with an existing Quarto project or document.
+From the quarto project or document directory, run the following command to install this format:
+
+```bash
+quarto install extension l3c-uqtr/quarto-thesis-report
+```
+
+## Example
+
+[![](examples/template.png)](examples/template.pdf)

@@ -1,0 +1,17 @@
+---
+title: Titre de la thèse
+candidat: Nom de la personne étudiante
+author: Guillaume Vallet, PhD-HDR
+doctype: Rapport sur le manuscrit de thèse
+univ: Nom de l'université
+grade: Doctorat recherche en Psychologie
+format: rapport-these-pdf
+---
+
+# Commentaires généraux
+
+# Commentaires spécifiques
+
+# Questions
+
+# Conclusion
