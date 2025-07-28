@@ -6,12 +6,17 @@ doctype: Rapport sur le manuscrit de thèse
 univ: Nom de l'université
 grade: Doctorat recherche en Psychologie
 format: rapport-these-pdf
+lang: FR
 ---
 
 # Commentaires généraux
+J'ai lu avec intérêt le manuscrit de thèse présenté par {{< meta candidat >}} intitulé "{{< meta title >}}". 
 
 # Commentaires spécifiques
+Cette section présente des commentaires plus spécifiques présentés par ordre d'importance.
+
 
 # Questions
+La lecture de la thèse m’a amené à me poser plusieurs questions qui pourraient être posées à la candidate lors de sa soutenance selon sa présentation orale, les échanges avec le jury et le temps imparti.
 
 # Conclusion

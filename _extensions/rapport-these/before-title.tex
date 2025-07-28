@@ -1,4 +1,3 @@
-\RequirePackage[french]{babel}
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
@@ -28,6 +27,8 @@
 {\color{l3c}\thesection}{1em}{}
 \titlespacing*{\section}
 {0pt}{1.5em}{0em}
+\titlespacing*{\subsection}
+{0pt}{1em}{0em}
 
 % Define the header and footer
 \fancypagestyle{plain}{
@@ -39,8 +40,8 @@
       \href{mailto:guillaume.vallet@uqtr.ca}{guillaume.vallet@uqtr.ca}
   }}}
   \fancyfoot[L]{
-    \textcolor{darkgray}{Rapport de thèse : $candidat$}}% Left footer
-  \fancyfoot[R]{\textcolor{darkgray}{Page \thepage\ sur \pageref{LastPage}}}% Right footer
+    \footnotesize{\textcolor{darkgray}{Rapport de thèse : $candidat$}}}% Left footer
+  \fancyfoot[R]{\footnotesize{\textcolor{darkgray}{Page \thepage\ sur \pageref{LastPage}}}}% Right footer
   \renewcommand{\footrulewidth}{.5pt}
   \renewcommand{\headrulewidth}{0pt}
 }
@@ -59,7 +60,7 @@
   \end{minipage}
 
   \vspace{-3ex}%
-  \noindent {\LARGE \color{l3c} \@title}
+  \noindent {\LARGE \color{l3c} $title$}
 
   \vspace{1.5ex}%
   \noindent% 
@@ -71,7 +72,7 @@
     $grade$
   \end{minipage}
   \hfill
-  \begin{minipage}{0.20\textwidth}
+  \begin{minipage}{0.22\textwidth}
     \textbf{Université :}\\
     $univ$
   \end{minipage}
@@ -82,7 +83,7 @@
     $ed$
   \end{minipage}
   $else$
-  \begin{minipage}{0.32\textwidth}
+  \begin{minipage}{0.20\textwidth}
     \textbf{Date d'\'{e}valuation :}\\
     $date$
   \end{minipage}

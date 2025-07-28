@@ -3,7 +3,6 @@ author: Guillaume Vallet
 version: 0.0.1
 quarto-required: ">=1.4.0"
 contributes:
-  lang: fr 
   formats:
     pdf:
       papersize: letter
@@ -15,8 +14,8 @@ contributes:
       geometry:
       - top=2.5cm
       - bottom=3.5cm
-      - left=2cm
-      - right=2cm
+      - left=2.2cm
+      - right=2.2cm
       template-partials:
         - before-title.tex
         - before-body.tex
